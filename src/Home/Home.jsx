@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import Question from "../Question/Question";
 
 
@@ -13,9 +14,13 @@ const Home = () => {
             </div>
 
             <div className=" my-40 bg-green-500">
+
                 <h1>Popular Tourist Spot</h1>
             </div>
-
+             <div>
+             <h1 className=" text-cyan-500 drop-shadow-2xl text-xl md:text-4xl font-bold text-center my-5 md:my-10">Best Photos</h1>
+              <PhotoGallery/>
+             </div>
             <div className=" my-10 md:my-24">
                 <h1 className=" text-cyan-500 drop-shadow-2xl text-xl md:text-4xl font-bold text-center my-5 md:my-10">Frequently Asked Question</h1>
                 <Question/>
