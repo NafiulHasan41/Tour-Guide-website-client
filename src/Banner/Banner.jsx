@@ -35,16 +35,16 @@ const Banner = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper h-[500px] rounded-xl shadow-2xl shadow-cyan-500/70"
+        className="mySwiper h-[500px] rounded-xl shadow-2xl bg-transparent bg-cyan-50 shadow-cyan-500/70 text-white font-bold"
       >
         <SwiperSlide>
           {" "}
           <div className=" w-full h-full">
-            <div className="hero w-full h-full bg-cover" style={{
+            <div className="hero w-full h-full bg-cover " style={{
                 backgroundImage:
                   "url(https://cdn.bangladeshscenictours.com/wp-content/uploads/2019/11/Exploring-Coxs-Bazar.jpg)",
               }}>
-                <div className="hero-overlay bg-opacity-30"></div>
+                <div className="hero-overlay bg-opacity-50"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md ">
                         <Slide><h1 className="mb-5 text-5xl font-bold">Explore Southeast Asia</h1></Slide>
@@ -62,7 +62,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide><div className=" w-full h-full">
-            <div className="hero w-full h-full bg-cover" style={{
+            <div className="hero w-full h-full bg-cover " style={{
                 backgroundImage:
                   "url(https://media-cdn.tripadvisor.com/media/photo-c/1280x250/10/e2/f8/43/longest-sea-beach-in.jpg)",
               }}>
@@ -82,7 +82,7 @@ const Banner = () => {
             </div>
           </div></SwiperSlide>
         <SwiperSlide><div className=" w-full h-full">
-            <div className="hero w-full h-full bg-cover" style={{
+            <div className="hero w-full h-full bg-cover " style={{
                 backgroundImage:
                   "url(https://xtntbd.com/wp-content/uploads/2023/08/c4fedab1-4041-4db5-9245-97439472cf2c.jpg)",
               }}>
@@ -102,7 +102,7 @@ const Banner = () => {
             </div>
           </div></SwiperSlide>
         <SwiperSlide><div className=" w-full h-full">
-            <div className="hero w-full h-full bg-center" style={{
+            <div className="hero w-full h-full bg-center " style={{
                 backgroundImage:
                   "url(https://static.toiimg.com/photo/107256233.cms)",
               }}>
