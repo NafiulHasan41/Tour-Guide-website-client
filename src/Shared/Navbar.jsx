@@ -106,10 +106,10 @@ const Navbar = () => {
 
   return (
    
-    <div className="navbar bg-gradient-to-b from-cyan-500 to-cyan-200  mt-8 rounded-2xl md:p-2 shadow-2xl shadow-cyan-500/70 md:px-7">
+    <div className="navbar sticky top-0 z-50 bg-gradient-to-b from-cyan-500 to-cyan-200  mt-8 rounded-2xl md:p-2 shadow-2xl shadow-cyan-500/70 md:px-7">
         
       <div className="navbar-start">
-        <div className="dropdown  sm:z-10">
+        <div className="dropdown relative  sm:z-50 ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
