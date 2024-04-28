@@ -7,7 +7,7 @@ const Root = () => {
     <div>
       <div className=" w-[93%] md:w-[90%] mx-auto">
         <Navbar />
-        <div className=" my-10">
+        <div className=" my-14 ">
         <Outlet />
         </div>
        

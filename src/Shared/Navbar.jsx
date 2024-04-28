@@ -60,14 +60,14 @@ const Navbar = () => {
 
       {user ? (
         <li>
-          <NavLink to="/updateProfile" className={({ isActive }) =>
+          <NavLink to="/addTouristSpot" className={({ isActive }) =>
               isActive ? "text-black bg-white font-bold" : "font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
             }>Add Tourist Spot</NavLink>
         </li>
       ) : null}
       {user ? (
         <li>
-          <NavLink to="/updateProfile" className={({ isActive }) =>
+          <NavLink to="/myList" className={({ isActive }) =>
               isActive ? "text-black bg-white font-bold" : "font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
             }>My List</NavLink>
         </li>
