@@ -72,6 +72,7 @@ const AboutUs = () => {
         </div>
         </div>
          <div>
+            <h1 className="text-xl md:text-4xl text-cyan-500 text-center">Contact Us</h1>
          <div className="mx-auto bg-gradient-to-b from-cyan-500 to-cyan-200  rounded-3xl p-4 md:p-10 shadow-2xl shadow-cyan-500/70 my-14">
             <div className=" md:w-[50%] mx-auto">
             <label className="input input-bordered flex items-center my-2 md:my-5">

@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddTouristSpot = () => {
 
@@ -8,13 +10,53 @@ const AddTouristSpot = () => {
 
   const handleCountryChange = (value) => {
     setCountry(value);
-    console.log(country);
+ 
   };
+
+ const handleAddTouristSpot = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const imageURL = form.url.value;
+    const touristSpotName = form.touristSpotName.value;
+    const location = form.location.value;
+    const description = form.description.value;
+    const average_cost = form.average_cost.value;
+    const seasonality = form.seasonality.value;
+    const travel_time = form.travel_time.value;
+    const totalVisitorPerYear = form.TotalVisitorPerYear.value;
+    const email = form.email.value;
+    const userName = form.userName.value;
+
+    const spot = { imageURL, touristSpotName, location, description, average_cost, seasonality, travel_time, totalVisitorPerYear, email, userName, country };
+
+    console.log(spot);
+
+       fetch('http://localhost:4000/touristSpots',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(spot)
+       }).then(res=>res.json())
+       .then(data=>{
+        console.log(data);
+        if(data.insertedId){
+           toast.success("Tourist Spot Added Successfully");
+            form.reset();
+        }
+       })
+
+
+
+
+
+
+  }  
   return (
     <div>
     <h1 className="text-center text-xl md:text-4xl font-bold text-red-500 my-5">Add Tourist Spot</h1>
 
-    <form className=" bg-gradient-to-b from-cyan-500 to-cyan-200 rounded-2xl p-3 md:p-7 shadow-2xl shadow-cyan-500/70">
+    <form onSubmit={handleAddTouristSpot} className=" bg-gradient-to-b from-cyan-500 to-cyan-200 rounded-2xl p-3 md:p-7 shadow-2xl shadow-cyan-500/70">
         <div >
             <label className="label">
                 <span className="label-text text-red-500 text-xl font-bold">
@@ -30,7 +72,7 @@ const AddTouristSpot = () => {
                         Tourist Spot Name
                     </span>
                 </label>
-                <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" required />
+                <input type="text" name="touristSpotName" placeholder="Name" className="input input-bordered w-full" required />
             </div>
             <div className=" flex-1">
                 <div className=" text-center mt-5">
@@ -132,6 +174,7 @@ const AddTouristSpot = () => {
             <button className="btn bg-rose-500 border-black w-full ">Submit</button>
             </div>
     </form>
+    <ToastContainer />
 </div>
   );
 };
