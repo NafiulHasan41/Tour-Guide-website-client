@@ -10,7 +10,7 @@ const Root = () => {
         <Outlet />
      
       </div>
-      <div>
+      <div className=" pt-10 bg-gradient-to-t from-cyan-500 to-cyan-50 rounded-t-[30px] md:rounded-t-[60px]">
 
       <Footer/>
       </div>

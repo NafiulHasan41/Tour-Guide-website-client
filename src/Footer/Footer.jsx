@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="footer footer-center p-1  md:p-10 bg-gradient-to-t from-cyan-500 to-cyan-200 rounded-t-[30px] md:rounded-t-[60px]  text-black font-bold ">
-       <div className=" flex flex-col md:flex-row items-center justify-center text-center">
+       <div className=" flex flex-col md:flex-row items-center justify-center text-center ">
 
            <div className="md:flex-1">
                <img className=" rounded-3xl w-40" src="../../public/tourism.jpeg" alt="" />
