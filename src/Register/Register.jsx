@@ -91,29 +91,29 @@ const Register = () => {
              <Helmet>
             <title>Register</title>
         </Helmet>
-       <div className="hero gap-1 md:min-h-[500px] bg-white rounded-3xl">
+       <div className="hero gap-1 md:min-h-[500px] bg-gradient-to-r from-cyan-500 to-cyan-200 rounded-3xl shadow-2xl shadow-cyan-500/70 text-red-500">
         <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="text-center lg:text-left">
                 <h1 className=" text-xl md:text-3xl lg:text-5xl font-bold">Register now!</h1>
                 <p className=" py-3 md:py-6 text-[16px]">Start your Journey with us . We welcome you!</p>
             </div>
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-green-400">
+            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-b from-cyan-500 to-cyan-200">
                 <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-xl font-bold">Name</span>
+                            <span className="label-text text-red-500 text-xl font-bold">Name</span>
                         </label>
                         <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-xl font-bold">Email</span>
+                            <span className="label-text text-red-500 text-xl font-bold">Email</span>
                         </label>
                         <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-xl font-bold">Password</span>
+                            <span className="label-text text-red-500 text-xl font-bold">Password</span>
                         </label>
                         <div className=" relative">
 
@@ -129,18 +129,18 @@ const Register = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-xl font-bold">Image URL</span>
+                            <span className="label-text text-red-500 text-xl font-bold">Image URL</span>
                         </label>
                         <input type="url" name="url" placeholder="URL" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn bg-yellow-300  border-none text-xs md:text-xl">Register</button>
+                        <button className="btn bg-green-400  text-red-500 border-none text-xs md:text-xl">Register</button>
                     </div>
                 </form>
 
                 <label className="label text-center  justify-center text-[16px]">
-                    <p className=" mx-1"> Already have an account ?</p>
-                    <Link to="/login" className="label-text-alt btn bg-green-300 border-none  text-[16px] text-blue-500">
+                    <p className=" mx-1 font-bold"> Already have an account ?</p>
+                    <Link to="/login" className="label-text-alt btn bg-rose-500 border-black  text-[16px] text-black">
                     Login</Link>
                 </label>
             </div>

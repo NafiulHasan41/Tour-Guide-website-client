@@ -164,7 +164,7 @@ const Navbar = () => {
         <div>
           {user ? (
             <div className="avatar hover:{}">
-              <div className=" w-16 mx-2 rounded-full">
+              <div className=" w-7 md:w-16 mx-2 rounded-full">
                 <img
                   data-tooltip-id="my-tooltip-2"
                   src={user.photoURL}
@@ -176,7 +176,7 @@ const Navbar = () => {
         </div>
 
         {user ? (
-          <button onClick={handleLogOut} className="btn  bg-rose-500  border-black text-black">
+          <button onClick={handleLogOut} className="btn text-[10px] md:text-xl  bg-rose-500  border-black text-black">
             LogOut
           </button>
         ) : (
