@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import Question from "../Question/Question";
@@ -7,7 +8,9 @@ import Question from "../Question/Question";
 const Home = () => {
     return (
         <div className=" mt-24">
-          
+              <Helmet>
+            <title>Explore SouthAsia : Home</title>
+        </Helmet>
 
             <div  className=" w-[80%] mx-auto">
                 <Banner/>

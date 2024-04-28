@@ -12,6 +12,8 @@ import Error from './Error/Error.jsx';
 import Home from './Home/Home.jsx';
 import AboutUs from './AboutUs/AboutUs.jsx';
 import AllTouristSpot from './AllTouristSpot/AllTouristSpot.jsx';
+import Login from './Login/Login.jsx';
+import Register from './Register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +32,15 @@ const router = createBrowserRouter([
       {
         path:"/allTouristSpot",
         element:<AllTouristSpot/>
-      }
+      },
+      {
+        path: "/login",
+        element: <Login/>,
+      },
+      {
+        path: "/register",
+        element: <Register/>,
+      },
     ]
   },
 ]);

@@ -7,7 +7,10 @@ const Root = () => {
     <div>
       <div className=" w-[93%] md:w-[90%] mx-auto">
         <Navbar />
+        <div className=" my-10">
         <Outlet />
+        </div>
+       
      
       </div>
       <div className=" pt-10 bg-gradient-to-t from-cyan-500 to-cyan-50 rounded-t-[30px] md:rounded-t-[60px]">
