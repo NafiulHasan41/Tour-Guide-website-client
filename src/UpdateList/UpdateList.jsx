@@ -58,7 +58,7 @@ const UpdateList = ( ) => {
                         title: 'Success!',
                         text: 'Tourist Spot Updated Successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'OK'
                       
                     })
 
@@ -68,7 +68,7 @@ const UpdateList = ( ) => {
     }
     return (
         <div>
-             
+               <h1 className=" text-cyan-500 drop-shadow-2xl text-xl md:text-4xl font-bold text-center my-5 md:my-20">Update Your Tourist Spot</h1>
                               <form  onSubmit={(e) => handleUpdateCoffee(e)}
                                   className=" bg-gradient-to-b from-cyan-500 to-cyan-200 rounded-2xl p-3 md:p-7 shadow-2xl shadow-cyan-500/70">
                                   <div>
@@ -100,8 +100,9 @@ const UpdateList = ( ) => {
                                               <select className="select select-bordered w-full  "  required
                                                   onChange={(event)=>
                                                   handleCountryChange(event.target.value)}
+                                                  defaultValue={spot.country}
                                                   >
-                                                  <option disabled selected>
+                                                  <option value="default" disabled>
                                                       Country Name
                                                   </option>
                                                   <option value="bangladesh">Bangladesh</option>
