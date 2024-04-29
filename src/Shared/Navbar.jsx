@@ -67,7 +67,7 @@ const Navbar = () => {
       ) : null}
       {user ? (
         <li>
-          <NavLink to="/myList" className={({ isActive }) =>
+          <NavLink to="myList" className={({ isActive }) =>
               isActive ? "text-black bg-white font-bold text-[10px] lg:text-[14px] " : " text-[10px] lg:text-[14px] font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
             }>My List</NavLink>
         </li>
@@ -167,6 +167,7 @@ const Navbar = () => {
                   data-tooltip-id="my-tooltip-2"
                   src={user.photoURL}
                   alt={user.displayName}
+                  
                 />
               </div>
             </div>
