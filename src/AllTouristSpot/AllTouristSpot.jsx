@@ -51,6 +51,7 @@ const AllTouristSpot = () => {
           <option disabled selected>
             Sort By
           </option>
+          <option value="default" >Default</option>
           <option value="avgCost" >AvgCost</option>
           <option value="totalVisit" >TotalVisit/Year</option>
         </select>

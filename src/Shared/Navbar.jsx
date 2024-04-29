@@ -132,7 +132,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link className="btn btn-ghost  text-black text-[14px] font-extrabold">
-         <img src="../../public/tourism.jpeg" alt="" className=" w-12 rounded-lg" />
+         <img src="https://static.vecteezy.com/system/resources/thumbnails/040/351/128/small/southeast-asia-country-map-map-of-southeast-asia-in-multicolor-vector.jpg" alt="" className=" w-12 rounded-lg" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

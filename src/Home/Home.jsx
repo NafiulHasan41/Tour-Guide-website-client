@@ -5,6 +5,7 @@ import Question from "../Question/Question";
 import { useLoaderData } from "react-router-dom";
 import Card from "../Card/Card";
 import { useEffect, useState } from "react";
+import CountryCard from "../CountryCard/CountryCard";
 
 
 
@@ -18,13 +19,24 @@ const Home = () => {
      useEffect(()=>{
          
         const neededSpots =loadedSpot.slice(0,6);
-        console.log(neededSpots);
+       
         setSpots(neededSpots);
         
 
      } , []);
 
-     console.log(spots);
+  
+
+     const [countrys , setCountry]=useState([]);
+
+     useEffect(() =>{
+
+        fetch('https://tour-guide-server-green.vercel.app/countries')
+        .then(res=>res.json())
+        .then(data=>{
+            setCountry(data);
+        })
+     },[])
 
 
 
@@ -45,6 +57,16 @@ const Home = () => {
                }
 
             </div>
+
+            <h1 className=" text-cyan-500 drop-shadow-2xl text-xl md:text-4xl font-bold text-center my-5 md:my-20">All Countries</h1>
+            <div className=" my-20 md:my-40 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
+
+     {
+                             countrys.map(country =><CountryCard key={country._id} country={country}></CountryCard>)
+     }
+
+ </div>
+
              <div>
              <h1 className=" text-cyan-500 drop-shadow-2xl text-xl md:text-4xl font-bold text-center my-5 md:my-10">Best Photos</h1>
               <PhotoGallery/>

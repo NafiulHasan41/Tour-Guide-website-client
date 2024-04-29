@@ -31,7 +31,7 @@ const List = () => {
         if (result.isConfirmed) {
 
 
-            fetch(`http://localhost:4000/touristSpots/${_id}`, {
+            fetch(`https://tour-guide-server-green.vercel.app/touristSpots/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -40,10 +40,10 @@ const UpdateList = ( ) => {
         const updatedSpot = { imageURL, touristSpotName, location, description, average_cost, seasonality, travel_time, totalVisitorPerYear , country };
        
     
-        console.log(updatedSpot);
+     
     
         // send data to the server
-        fetch(`http://localhost:4000/touristSpots/${spot._id}`, {
+        fetch(`https://tour-guide-server-green.vercel.app/touristSpots/${spot._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -52,7 +52,6 @@ const UpdateList = ( ) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',

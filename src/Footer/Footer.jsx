@@ -7,7 +7,7 @@ const Footer = () => {
        <div className=" flex flex-col md:flex-row items-center justify-center text-center ">
 
            <div className="md:flex-1">
-               <img className=" rounded-3xl w-40" src="../../public/tourism.jpeg" alt="" />
+               <img className=" rounded-3xl w-40" src="https://static.vecteezy.com/system/resources/thumbnails/040/351/128/small/southeast-asia-country-map-map-of-southeast-asia-in-multicolor-vector.jpg" alt="" />
            </div>
            <div className="md:flex-1   p-10 ">
                <nav className="grid grid-flow-col gap-8 ">

@@ -19,6 +19,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import List from './List/List.jsx';
 import Details from './Details/Details.jsx';
 import UpdateList from './UpdateList/UpdateList.jsx';
+import Country from './Country/Country.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home/>,
-        loader:()=> fetch('http://localhost:4000/touristSpots')
+        loader:()=> fetch('https://tour-guide-server-green.vercel.app/touristSpots')
       },
       {
         path:"/aboutUs",
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       {
         path:"/allTouristSpot",
         element:<AllTouristSpot/>,
-        loader:()=> fetch('http://localhost:4000/touristSpots')
+        loader:()=> fetch('https://tour-guide-server-green.vercel.app/touristSpots')
       },
       {
         path: "/login",
@@ -56,18 +57,24 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element:<PrivateRoute> <List/> </PrivateRoute> ,
-        loader:()=> fetch('http://localhost:4000/touristSpots'),
+        loader:()=> fetch('https://tour-guide-server-green.vercel.app/touristSpots'),
       },
       {
         path: "/details/:id",
         element:<PrivateRoute> <Details/> </PrivateRoute> ,
-        loader:({params})=> fetch(`http://localhost:4000/touristSpots/${params.id}`)
+        loader:({params})=> fetch(`https://tour-guide-server-green.vercel.app/touristSpots/${params.id}`)
       },
       {
         path: "myList/update/:id",
         element:<PrivateRoute> <UpdateList/> </PrivateRoute> ,
-        loader:({params})=> fetch(`http://localhost:4000/touristSpots/${params.id}`)
+        loader:({params})=> fetch(`https://tour-guide-server-green.vercel.app/touristSpots/${params.id}`)
+      },
+      {
+        path: "/country/:countryName",
+        element: <Country/>  ,
+        loader:()=> fetch('https://tour-guide-server-green.vercel.app/touristSpots'),
       }
+     
      
     ]
   },

@@ -29,9 +29,9 @@ const AddTouristSpot = () => {
 
     const spot = { imageURL, touristSpotName, location, description, average_cost, seasonality, travel_time, totalVisitorPerYear, email, userName, country };
 
-    console.log(spot);
+    
 
-       fetch('http://localhost:4000/touristSpots',{
+       fetch('https://tour-guide-server-green.vercel.app/touristSpots',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -39,7 +39,7 @@ const AddTouristSpot = () => {
         body:JSON.stringify(spot)
        }).then(res=>res.json())
        .then(data=>{
-        console.log(data);
+       
         if(data.insertedId){
            toast.success("Tourist Spot Added Successfully");
             form.reset();
@@ -87,7 +87,7 @@ const AddTouristSpot = () => {
                             handleCountryChange(event.target.value)}
 
                             >
-                            <option value="default" disabled>
+                            <option disabled selected>
                                 Country Name
                             </option>
                             <option value="bangladesh">Bangladesh</option>
