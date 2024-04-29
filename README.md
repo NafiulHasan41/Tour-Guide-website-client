@@ -1,8 +1,40 @@
-# React + Vite
+# Project type
+  ## B9 A10 Type-01 Requirements
+  ## WEB9-2451
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Live Link 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <https://explore-asia-tour-guid.netlify.app>
+ 
+## Project Details
+- Project Name: Explore asia tour guide
+- Description: This project used to learn about crud operation using mongoDB and express.js
+- Technologies Used: React, Vite, Node.js , Express.js
+- Features:
+    - User authentication and registration
+    - Tourist Spot listing with details, images, and amenities
+    - Tourist card
+    - About section
+    - Messaging system for communication between students and property owners
+    - In this website user can see different place of south east asia and  plan to visit there . Every user can share their tour experience .It's like e social website for Travel lover's
+
+
+## Project NPM packages 
+
+  
+   - Aos 
+   - React swiper 
+   - firebase 
+   - react-helmet-async 
+   - react-icons 
+   - react-tooltip
+   - react-awesome-reveal
+   - react-simple-typewriter
+   - react-toastify
+   - sweetalert2
+   - swiper
+
+   
+
+
