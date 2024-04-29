@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 const List = () => {
   const { user } = useContext(AuthContext);
@@ -10,8 +12,44 @@ const List = () => {
   useEffect(() => {
        const neededSpots = loadedSpots.filter(spot => spot.email === user.email);
          setSpots(neededSpots);
-         console.log(neededSpots);
+        
   }, []);
+
+  const handleDelete = _id => {
+
+    Swal.fire({
+        title: 'Are you sure want to delete it?',
+        text: "You won't be able to undo this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+
+            fetch(`http://localhost:4000/touristSpots/${_id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your Spot has been deleted.',
+                            'success'
+                        )
+                        const remaining = spots.filter(spot => spot._id !== _id);
+                        setSpots(remaining);
+                    }
+                })
+
+        }
+    })
+}
+
 
   return (
     <div className="overflow-x-auto">
@@ -59,7 +97,7 @@ const List = () => {
                       <button className="btn btn-sm btn-primary">update</button>
                     </td>
                     <td>
-                      <button className="btn btn-sm btn-error">Delete</button>
+                      <button onClick={()=> handleDelete(spot._id)} className="btn btn-sm btn-error">Delete</button>
                     </td>
                    
                   </tr>
