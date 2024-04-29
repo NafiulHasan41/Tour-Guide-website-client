@@ -54,21 +54,21 @@ const Navbar = () => {
       <li className=" ">
         <NavLink to="/allTouristSpot"
         className={({ isActive }) =>
-        isActive ? "text-black bg-white font-bold" : " font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg  btn  border-black "
+        isActive ? "text-black bg-white font-bold text-[10px] lg:text-[14px]" : " text-[10px] lg:text-[14px] font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg  btn  border-black "
       }>All Tourist Spot</NavLink>
       </li>
 
       {user ? (
         <li>
           <NavLink to="/addTouristSpot" className={({ isActive }) =>
-              isActive ? "text-black bg-white font-bold" : "font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
+              isActive ? "text-black bg-white font-bold text-[10px] lg:text-[14px]" : "text-[10px] lg:text-[14px] font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
             }>Add Tourist Spot</NavLink>
         </li>
       ) : null}
       {user ? (
         <li>
           <NavLink to="/myList" className={({ isActive }) =>
-              isActive ? "text-black bg-white font-bold" : "font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
+              isActive ? "text-black bg-white font-bold text-[10px] lg:text-[14px] " : " text-[10px] lg:text-[14px] font-bold my-2  md:mx-2 text-black bg-rose-500 rounded-lg btn  border-black"
             }>My List</NavLink>
         </li>
       ) : null}
@@ -95,8 +95,6 @@ const Navbar = () => {
       .then(() => {
         toast.success("User Logged out Successfully");
 
-        toast("hello");
-
         navigate("/");
       })
       .catch((error) => {
@@ -106,7 +104,7 @@ const Navbar = () => {
 
   return (
    
-    <div className="navbar sticky top-0 z-50 bg-gradient-to-b from-cyan-500 to-cyan-200  mt-8 rounded-2xl md:p-2 shadow-2xl shadow-cyan-500/70 md:px-7">
+    <div className="navbar sticky top-0 z-50 bg-gradient-to-b from-cyan-500 to-cyan-200  mt-8 rounded-2xl md:p-2 shadow-2xl shadow-cyan-500/70 lg:px-3">
         
       <div className="navbar-start">
         <div className="dropdown relative  sm:z-50 ">
@@ -164,7 +162,7 @@ const Navbar = () => {
         <div>
           {user ? (
             <div className="avatar hover:{}">
-              <div className=" w-7 md:w-16 mx-2 rounded-full">
+              <div className=" w-7 lg:w-12 mx-2 rounded-full">
                 <img
                   data-tooltip-id="my-tooltip-2"
                   src={user.photoURL}
@@ -176,7 +174,7 @@ const Navbar = () => {
         </div>
 
         {user ? (
-          <button onClick={handleLogOut} className="btn text-[10px] md:text-xl  bg-rose-500  border-black text-black">
+          <button onClick={handleLogOut} className="btn text-[8px]  lg:text-xl  bg-rose-500  border-black text-black">
             LogOut
           </button>
         ) : (

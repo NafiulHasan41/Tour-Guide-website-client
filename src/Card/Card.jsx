@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Card = ({spot}) => {
 
@@ -12,7 +13,7 @@ const Card = ({spot}) => {
             <figure><img className=" overflow-clip rounded-xl" src={spot.imageURL} alt="Shoes" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">{spot.touristSpotName}</h2>
+                <h2 className="card-title text-black">{spot.touristSpotName}</h2>
                 <div>
                    <div className="flex gap-5 justify-between">
                        <p className="  text-black font-bold">Avg_Cost : <span className=" text-rose-500 font-medium"> {spot.average_cost} </span> </p>
@@ -23,7 +24,10 @@ const Card = ({spot}) => {
                        <p className="  text-black font-bold">Seasonality : <span className=" text-rose-500 font-medium"> {spot.seasonality} </span> </p>
                    </div>
                    <div>
-                   <button className="btn bg-rose-500 border-black w-full ">View Details</button>
+                    <Link to={`/details/${spot._id}`} >
+                    <button className="btn bg-rose-500 border-black w-full ">View Details</button>
+                    </Link>
+               
                    </div>
                 
                 </div>
